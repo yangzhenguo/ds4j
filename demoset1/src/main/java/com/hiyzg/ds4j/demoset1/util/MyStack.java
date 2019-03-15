@@ -31,4 +31,15 @@ public class MyStack {
         this.elements = newElements;
         return target;
     }
+
+    public int peek() {
+        if (this.elements.length <= 0) {
+            throw new RuntimeException("没有元素");
+        }
+        return this.elements[this.elements.length - 1];
+    }
+
+    public boolean isEmpty() {
+        return this.elements.length <= 0;
+    }
 }
