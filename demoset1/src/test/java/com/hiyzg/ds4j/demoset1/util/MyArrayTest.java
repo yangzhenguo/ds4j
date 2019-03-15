@@ -35,4 +35,13 @@ public class MyArrayTest {
         Integer delete = array.delete(1);
         System.out.println(delete);
     }
+
+    @Test
+    public void set() throws Exception {
+        MyArray<Integer> array = new MyArray<>();
+        array.add(1);
+        array.add(2);
+        array.set(1, 3);
+        assertEquals(new Integer(3), array.get(1));
+    }
 }

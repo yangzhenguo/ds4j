@@ -39,4 +39,8 @@ public class MyArray<T> {
         this.elements = newElements;
         return deleted;
     }
+
+    public T set(int i, T element) {
+        return this.elements[i] = element;
+    }
 }
