@@ -58,4 +58,13 @@ public class MyArrayTest {
         int i = array.binarySearch(7);
         assertEquals(-1, i);
     }
+
+    @Test
+    public void set() throws Exception {
+        MyArray array = new MyArray();
+        array.add(1);
+        array.add(2);
+        array.set(1, 3);
+        assertEquals(3, array.get(1));
+    }
 }

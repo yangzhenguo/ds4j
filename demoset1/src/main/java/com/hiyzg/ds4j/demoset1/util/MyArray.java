@@ -66,4 +66,8 @@ public class MyArray {
         } while (start < end);
         return -1;
     }
+
+    public int set(int i, int element) {
+        return this.elements[i] = element;
+    }
 }
