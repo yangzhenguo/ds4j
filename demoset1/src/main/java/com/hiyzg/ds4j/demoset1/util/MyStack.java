@@ -20,6 +20,9 @@ public class MyStack {
     }
 
     public int pop() {
+        if (this.elements.length <= 0) {
+            throw new RuntimeException("已经没有元素可以弹出了");
+        }
         int target = this.elements[this.elements.length - 1];
         int[] newElements = new int[this.elements.length - 1];
         for (int i = 0; i < newElements.length; i++) {

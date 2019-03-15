@@ -16,4 +16,10 @@ public class MyStackTest {
         stack.push(5);
         assertEquals(5, stack.pop());
     }
+
+    @Test(expected = RuntimeException.class)
+    public void pop2() throws Exception {
+        MyStack stack = new MyStack();
+        stack.pop();
+    }
 }
