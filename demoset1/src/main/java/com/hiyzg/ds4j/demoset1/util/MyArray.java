@@ -58,11 +58,10 @@ public class MyArray {
                 return middle;
             } else if (target < this.elements[middle]) {
                 end = middle - 1;
-                middle = (start + end) / 2;
             } else {
                 start = middle + 1;
-                middle = (start + end) / 2;
             }
+            middle = (start + end) / 2;
         } while (start < end);
         return -1;
     }
