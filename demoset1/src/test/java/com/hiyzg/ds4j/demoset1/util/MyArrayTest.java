@@ -22,17 +22,40 @@ public class MyArrayTest {
 
     @Test
     public void get() throws Exception {
-        MyArray<Integer> array = new MyArray<>();
+        MyArray array = new MyArray();
         array.add(1);
-        assertEquals(new Integer(1), array.get(0));
+        assertEquals(1, array.get(0));
     }
 
     @Test
     public void delete() throws Exception {
-        MyArray<Integer> array = new MyArray<>();
+        MyArray array = new MyArray();
         array.add(1);
         array.add(2);
-        Integer delete = array.delete(1);
-        System.out.println(delete);
+        int delete = array.delete(1);
+        assertEquals(2, delete);
+    }
+
+    @Test
+    public void lineSearch() throws Exception {
+        MyArray array = new MyArray();
+        array.add(3);
+        array.add(2);
+        array.add(6);
+        array.add(4);
+        array.add(1);
+        assertEquals(3, array.lineSearch(4));
+    }
+
+    @Test
+    public void binarySearch() throws Exception {
+        MyArray array = new MyArray();
+        array.add(1);
+        array.add(3);
+        array.add(6);
+        array.add(8);
+        array.add(9);
+        int i = array.binarySearch(7);
+        assertEquals(-1, i);
     }
 }
